@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+data_env/
+.venv/
+venv/
+env/
+
+# Conda / local environments
+*.conda
+
+# Large datasets - do not push raw CSV files
+datasets/public_rotating_machine/raw_part1/
+datasets/public_rotating_machine/selected_sample/
+datasets/public_rotating_machine/processed/
+*.csv
+
+# Model outputs
+ml_pipeline/models/
+ml_pipeline/outputs/
+
+# VS Code local settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
