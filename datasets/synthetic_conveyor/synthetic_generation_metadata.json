@@ -1,0 +1,78 @@
+{
+    "dataset": "synthetic_conveyor",
+    "sample_rate_hz": 10,
+    "sample_interval_seconds": 0.1,
+    "recording_duration_seconds": 300,
+    "samples_per_recording": 3000,
+    "number_of_runs": 3,
+    "experimental_split": {
+        "training_run": 0,
+        "validation_run": 1,
+        "test_run": 2
+    },
+    "labels": {
+        "0": "normal",
+        "1": "fault"
+    },
+    "sensor_columns": [
+        "current_A",
+        "voltage_V",
+        "rpm",
+        "vibration_g",
+        "piezo_value",
+        "ir_entry",
+        "ir_exit"
+    ],
+    "base_random_seed": 42,
+    "generation_design": "Independent normal and fault recordings are generated for Runs 0, 1 and 2. Fault recordings contain varying mechanical resistance severity, represented by increased current and vibration and reduced RPM. Normal operating variation and run-to-run baseline differences are retained.",
+    "files": [
+        {
+            "run_id": 0,
+            "condition": "normal",
+            "label": 0,
+            "file": "synthetic_normal_0.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        },
+        {
+            "run_id": 0,
+            "condition": "fault",
+            "label": 1,
+            "file": "synthetic_fault_0.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        },
+        {
+            "run_id": 1,
+            "condition": "normal",
+            "label": 0,
+            "file": "synthetic_normal_1.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        },
+        {
+            "run_id": 1,
+            "condition": "fault",
+            "label": 1,
+            "file": "synthetic_fault_1.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        },
+        {
+            "run_id": 2,
+            "condition": "normal",
+            "label": 0,
+            "file": "synthetic_normal_2.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        },
+        {
+            "run_id": 2,
+            "condition": "fault",
+            "label": 1,
+            "file": "synthetic_fault_2.csv",
+            "rows": 3000,
+            "duration_seconds": 300
+        }
+    ]
+}
