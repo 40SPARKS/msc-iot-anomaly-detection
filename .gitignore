@@ -11,15 +11,22 @@ env/
 # Conda / local environments
 *.conda
 
-# Large datasets - do not push raw CSV files
+# Large datasets
 datasets/public_rotating_machine/raw_part1/
 datasets/public_rotating_machine/selected_sample/
 datasets/public_rotating_machine/processed/
-*.csv
+datasets/synthetic_conveyor/
 
-# Model outputs
+# Trained models
 ml_pipeline/models/
+
+# Generated outputs
 ml_pipeline/outputs/
+
+# Large ML/data artefacts
+*.npz
+*.keras
+*.joblib
 
 # VS Code local settings
 .vscode/
@@ -27,4 +34,3 @@ ml_pipeline/outputs/
 # System files
 .DS_Store
 Thumbs.db
-
